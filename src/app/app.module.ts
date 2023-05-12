@@ -13,7 +13,6 @@ import { HeadComponent } from './parts/head/head.component';
 import { NavbarComponent } from './parts/navbar/navbar.component';
 import { FooterComponent } from './parts/footer/footer.component';
 import { ArticleComponent } from './modules/general/articles/article/article.component';
-import { PaiementComponent } from './modules/general/paiement/paiement.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AddarticleComponent } from './modules/general/articles/addarticle/addarticle.component';
 import { UpdatearticleComponent } from './modules/general/articles/updatearticle/updatearticle.component';
@@ -24,6 +23,10 @@ import { FournisseurComponent } from './modules/general/fournisseurs/fournisseur
 import { AddfournisseurComponent } from './modules/general/fournisseurs/addfournisseur/addfournisseur.component';
 import { UpdatefournisseurComponent } from './modules/general/fournisseurs/updatefournisseur/updatefournisseur.component';
 import { NavComponent } from './parts/nav/nav.component';
+import { AssuranceComponent } from './modules/general/client/assurance/assurance.component';
+import { ParticulierComponent } from './modules/general/client/particulier/particulier.component';
+import { EntrepriseComponent } from './modules/general/client/entreprise/entreprise.component';
+import { ClientComponent } from './modules/general/client/client.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -37,7 +40,6 @@ import { NavComponent } from './parts/nav/nav.component';
     NavbarComponent,
     FooterComponent,
     ArticleComponent,
-    PaiementComponent,
     AddarticleComponent,
     UpdatearticleComponent,
     AddcategorieComponent,
@@ -46,7 +48,11 @@ import { NavComponent } from './parts/nav/nav.component';
     FournisseurComponent,
     AddfournisseurComponent,
     UpdatefournisseurComponent,
-    NavComponent
+    NavComponent,
+    AssuranceComponent,
+    ParticulierComponent,
+    EntrepriseComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,

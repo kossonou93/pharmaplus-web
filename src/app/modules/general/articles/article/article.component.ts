@@ -44,7 +44,7 @@ export class ArticleComponent implements OnInit{
   }
 
   chargerArticles() {
-    this.articleService.getAll().subscribe(article => {
+    this.articleService.all().subscribe(article => {
       console.log(article);
       this.articles = article.data;
       setTimeout(()=>{
@@ -85,9 +85,9 @@ export class ArticleComponent implements OnInit{
             }
           ],
           pagingType: 'full_numbers',
-          pageLength: 5,
+          pageLength: 50,
           processing: true,
-          lengthMenu : [5, 10, 25]
+          lengthMenu : [5, 10, 25, 50, 100, 1000]
         });
       }, 1);
     });

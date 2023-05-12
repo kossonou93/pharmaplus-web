@@ -6,142 +6,311 @@
     <!-- partial:partials/_navbar.html -->
     <app-navbar></app-navbar>
     <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <!-- partial:partials/_sidebar.html -->
-      <app-nav></app-nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0">RoyalUI Dashboard</h4>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                      <i class="ti-clipboard btn-icon-prepend"></i>Report
-                    </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">USERS</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">34040</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth px-0" style="background-image: url('/../../assets/images/background/healthcare.png');">
+        <!--<app-nav></app-nav> -->
+            <div class="row" style="width: 100%;">
+              <div class="col-1 col-md-1 d-none d-lg-block"></div>
+              <div class="col-4 col-sm-6 col-md-3 col-lg-3 grid-margin stretch-card" style="height: 650px;">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="tab">
+                      <button class="tablinks" (click)="openCity($event, 'Facturation')" style="text-align: center; height: 120px;">
+                        <img src="/../../assets/images/icone/icons8-dossier-ouvert-50.png" class="img-fluid" alt="Mon icône">
+                        <h4 class="h4 h4-responsive" style="margin-top: 10px;">FACTURATION</h4>
+                      </button>
+                      <button class="tablinks" (click)="openCity($event, 'Gestion')" style="text-align: center; height: 120px;">
+                        <img src="/../../assets/images/icone/icons8-sitemap-50.png" class="img-fluid" alt="Mon icône">
+                        <h4 class="h4 h4-responsive" style="margin-top: 10px;">GESTION DES STOCKS</h4>
+                      </button>
+                      <button class="tablinks" (click)="openCity($event, 'Tableau')" style="text-align: center; height: 120px;">
+                        <img src="/../../assets/images/icone/icons8-moniteur-50.png" class="img-fluid" alt="Mon icône">
+                        <h4 class="h4 h4-responsive" style="margin-top: 10px;">TABLEAU DE BORD</h4>
+                      </button>
+                      <button class="tablinks" (click)="openCity($event, 'Parametre')" style="text-align: center; height: 120px;">
+                        <img src="/../../assets/images/icone/icons8-engrenages-50.png" class="img-fluid" alt="Mon icône">
+                        <h4 class="h4 h4-responsive" style="margin-top: 10px;">PARAMETRES</h4>
+                      </button>
+                      <button class="tablinks" (click)="openCity($event, 'Info')" id="defaultOpen" style="text-align: center; height: 120px;">
+                        <img src="/../../assets/images/icone/icons8-mesure-50.png" class="img-fluid" alt="Mon icône">
+                        <h4 class="h4 h4-responsive" style="margin-top: 10px;">INFOS / GESTION DE DIFFEREES</h4>
+                      </button>
+                    </div>
                   </div>
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
                 </div>
               </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">ARTICLES</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">47033</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+
+              <div class="col-8 col-sm-6 col-md-9 col-lg-7 grid-margin stretch-card" style="height: 650px;">
+                <div class="card">
+                  <div class="card-body">
+                    <div id="Facturation" class="tabcontent">
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-moniteur-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CAISSE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Vente en détail</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/3289573-guy-individual-man-people-peron_107088.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CLIENT</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Compte Client</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-facture-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">FACTURE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Edition des factures</h5>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-vente-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">VENTE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Liste des ventes</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/check-mark_icon-icons.com_73635.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">PROFORMA</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">La proforma</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/magnifier-1_icon-icons.com_56924.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">VERIFICATION DES VENTES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Vérification des ventes à crédit</h5>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="Gestion" class="tabcontent">
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/ambulance_icon-icons.com_73686.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">ARTICLES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Gestion des Articles</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/list-on-window_icon-icons.com_73503.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">COMMANDES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Gestion des Commandes</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/lightning-bolt-shadow_icon-icons.com_73510.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">MEDICAMENTS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Déconditionner un Médicament</h5>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-fournisseur-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">FOURNISSEURS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Gérer les Fournisseurs</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/dashboard_icon-icons.com_73601.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">DOCUMENTS FOURNISSEURS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Le document des fournisseurs</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/edition_theproperty_3623.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">INVENTAIRE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Faire les Inventaires</h5>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="Tableau" class="tabcontent">
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/euro-currency-symbol_icon-icons.com_73582.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CHIFFRE D'AFFAIRE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Chiffre d'Affaire</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/sort-by-attributes_icon-icons.com_73406.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">COMPTABLE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Document Comptable</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/bar-graph-on-a-rectangle_icon-icons.com_73664.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">DOCUMENTS STOCKS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Document de Stocks</h5>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/bankingbanknotes_87362.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">VERSEMENTS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Les Versements</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/couple-of-arrows-changing-places_icon-icons.com_73608.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">TRACES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Trace des Opérations</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/plus-symbol_icon-icons.com_71384.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">AUTRES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Autres Opérations</h5>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="Parametre" class="tabcontent">
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/3289573-guy-individual-man-people-peron_107088.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CLIENTS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Paramètres Clients</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-fournisseur-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">FOURNISSEURS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Paramètres Fournisseur</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/icons8-engrenages-64.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">PARAMETRES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Paramétrages</h5>
+                          </a></div>
+                      </div>
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/table-grid_icon-icons.com_73384.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px; ">TABLE DE REFERENCE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Table de Référence</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/worker1_113300.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">UTILISATEURS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Paramètres Utilisateurs</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/agenda_113301.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CARNETS PHARMACIE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Gestion des carnets</h5>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="defaultOpen" class="tabcontent">
+                      <div class="row elmt-ple">
+                        <div class="col-12 col-sm-12">
+                          <img src="/../../assets/images/background/logo-pharma.jpg" style="margin-top: 30px;" class="img-fluid" alt="Mon icône">
+                        </div>
+                        <div class="col-12 col-sm-12">
+                          <h1 class="h1 h1-responsive" style="margin-top: 10px;">PHARMACIE SANTE PLUS</h1>
+                        </div>
+                        <div class="col-12 col-sm-12">
+                          <h2 class="h2 h2-responsive" style="margin-top: 10px;">DR JOHNSON</h2>
+                        </div>
+                        <div class="col-12 col-sm-12">
+                          <h4 class="h4 h4-responsive" style="margin-top: 10px;">TEL : 2728200386</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="Info" class="tabcontent">
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/remote_desktop_icon_137254.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">REGULARISATION</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Régularisation des stocks</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/calculator_curren.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">CAISSE DIFFEREES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Caisse des ventes différées</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/ic-past-orders_97638.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">VENTES DIFFEREES</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Liste des ventes différées</h5>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row elmt">
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/spread_distribution.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">REPARTITION</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Répartition des Articles</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/words_documents.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">AUXILIAIRE</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Informations Clients</h5>
+                          </a>
+                        </div>
+                        <div class="col-4">
+                          <a class="nav-link" routerLink="/articles">
+                            <img src="/../../assets/images/icone/info_106396.png" class="img-fluid" alt="Mon icône">
+                            <h3 class="h3 h3-responsive" style="margin-top: 10px;">INFOS</h3>
+                            <h5 class="h5 h5-responsive" style="margin-top: 10px; color: black;">Informations Pharmacie</h5>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
                 </div>
               </div>
+              <div class="col-1 col-md-1 d-none d-lg-block"></div>
             </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">VENTES</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">40016</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">PAIEMENTS</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">61344</h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">CHIFFRES D'AFFAIRES</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">34040</h3>
-                    <i class="ti-calendar icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-danger">0.12% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">ARTICLES</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">47033</h3>
-                    <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-danger">0.47% <span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">VENTES</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">40016</h3>
-                    <i class="ti-agenda icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-success">64.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title text-md-center text-xl-left">PAIEMENTS</p>
-                  <div class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">61344</h3>
-                    <i class="ti-layers-alt icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                  </div>
-                  <p class="mb-0 mt-2 text-success">23.00%<span class="text-black ms-1"><small>(30 days)</small></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- main-panel ends -->
         </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
-          </div>
-        </footer>
-        <!-- partial -->
       </div>
-      <!-- main-panel ends -->
-    </div>
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+
   <app-footer></app-footer>
 
 </body>

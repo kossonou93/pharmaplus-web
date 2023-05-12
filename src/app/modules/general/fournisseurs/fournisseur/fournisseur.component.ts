@@ -82,9 +82,9 @@ export class FournisseurComponent implements OnInit{
             }
           ],
           pagingType: 'full_numbers',
-          pageLength: 5,
+          pageLength: 50,
           processing: true,
-          lengthMenu : [5, 10, 25]
+          lengthMenu : [5, 10, 25, 50, 100, 1000]
         });
       }, 1);
     });

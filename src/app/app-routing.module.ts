@@ -14,6 +14,7 @@ import { AddcategorieComponent } from './modules/general/categories/addcategorie
 import { FournisseurComponent } from './modules/general/fournisseurs/fournisseur/fournisseur.component';
 import { UpdatecategorieComponent } from './modules/general/categories/updatecategorie/updatecategorie.component';
 import { CategorieComponent } from './modules/general/categories/categorie/categorie.component';
+import { ClientComponent } from './modules/general/client/client.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'add-categorie', component: AddcategorieComponent},
   { path: 'update-categorie', component: UpdatecategorieComponent},
   { path: 'categories', component: CategorieComponent},
+  { path: 'clients', component: ClientComponent}
 ]
 
 

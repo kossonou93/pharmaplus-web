@@ -6,37 +6,38 @@
     <!-- partial:partials/_navbar.html -->
     <app-navbar></app-navbar>
     <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
       <!-- partial:partials/_sidebar.html -->
-      <app-nav></app-nav>
-      <!-- partial -->
-      <div class="main-panel">
+      <!-- <app-nav></app-nav>
+       partial -->
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h4 class="font-weight-bold mb-0">RoyalUI Dashboard</h4>
-                </div>
-                <div>
-                  <button class="btn btn-primary btn-icon-text btn-rounded" [routerLink]="['/add-article']">
-                    <i class="ti-pencil-alt btn-icon-prepend"></i>Ajouter
-                  </button>
-                </div>
-                <div>
-                  <button class="btn btn-primary btn-icon-text btn-rounded" (click)="updateArticle()">
-                    <i class="ti-pencil-alt btn-icon-prepend"></i>Modifier
-                  </button>
-                </div>
-                <div>
-                  <button type="button" (click)="deleteArticle()" class="btn btn-danger btn-icon-text btn-rounded">
-                    <i class="ti-clipboard btn-icon-prepend"></i>Supprimer
-                  </button>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-secondary btn-icon-text btn-rounded">
-                      <i class="ti-printer btn-icon-prepend"></i>Imprimer
-                    </button>
+          <div class="row" style="margin-top:50px">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <button class="btn btn-primary btn-icon-text btn-rounded" [routerLink]="['/add-article']">
+                          <i class="ti-pencil-alt btn-icon-prepend"></i>Ajouter
+                        </button>
+                      </div>
+                      <div>
+                        <button class="btn btn-primary btn-icon-text btn-rounded" (click)="updateArticle()">
+                          <i class="ti-pencil-alt btn-icon-prepend"></i>Modifier
+                        </button>
+                      </div>
+                      <div>
+                        <button type="button" (click)="deleteArticle()" class="btn btn-danger btn-icon-text btn-rounded">
+                          <i class="ti-clipboard btn-icon-prepend"></i>Supprimer
+                        </button>
+                      </div>
+                      <div>
+                          <button type="button" class="btn btn-secondary btn-icon-text btn-rounded">
+                            <i class="ti-printer btn-icon-prepend"></i>Imprimer
+                          </button>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -46,7 +47,7 @@
               <div class="card">
                 <div class="card-body">
                   <p class="card-title mb-0">Articles List</p>
-                  <div class="table-responsive">
+                  <div class="table-responsive" style="height: 600px;">
                     <!--<table id="datatableexample"  class="table table-hover" >
                     </table>-->
                     <table id="datatableArticle" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover"></table>
@@ -55,21 +56,16 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
-          </div>
-        </footer>
-        <!-- partial -->
       </div>
-      <!-- main-panel ends -->
     </div>
+    <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
+      </div>
+    </footer>
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->

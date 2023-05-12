@@ -14,7 +14,7 @@ export class ArticleService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<ApiResponse<Article[]>>{
+  all(): Observable<ApiResponse<Article[]>>{
     return this.http.get<ApiResponse<Article[]>>(`${ApiConfig.articles}/undelete/all`);
   }
 

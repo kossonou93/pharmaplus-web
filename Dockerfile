@@ -1,17 +1,12 @@
-# Utilise l'image officielle de Node.js comme base
-FROM node:latest
-
-# Définit le répertoire de travail à /app
+FROM node:latest as node
 WORKDIR /app
-
-# Copie les fichiers de package.json et package-lock.json vers le conteneur
-COPY package*.json ./
-
-# Installe les dépendances du projet
-RUN npm install
-
-# Copie le reste des fichiers vers le conteneur
 COPY . .
-
-# Compile l'application Angular en mode production
+RUN npm install
 RUN npm run build --prod
+
+#Stage: 2
+FROM nginx:alpine
+COPY --from=node /app/dist/angular-ui /usr/share/nginx/html
+
+
+
