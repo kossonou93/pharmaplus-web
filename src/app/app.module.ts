@@ -16,9 +16,6 @@ import { ArticleComponent } from './modules/general/articles/article/article.com
 import { DataTablesModule } from 'angular-datatables';
 import { AddarticleComponent } from './modules/general/articles/addarticle/addarticle.component';
 import { UpdatearticleComponent } from './modules/general/articles/updatearticle/updatearticle.component';
-import { AddcategorieComponent } from './modules/general/categories/addcategorie/addcategorie.component';
-import { UpdatecategorieComponent } from './modules/general/categories/updatecategorie/updatecategorie.component';
-import { CategorieComponent } from './modules/general/categories/categorie/categorie.component';
 import { FournisseurComponent } from './modules/general/fournisseurs/fournisseur/fournisseur.component';
 import { AddfournisseurComponent } from './modules/general/fournisseurs/addfournisseur/addfournisseur.component';
 import { UpdatefournisseurComponent } from './modules/general/fournisseurs/updatefournisseur/updatefournisseur.component';
@@ -27,6 +24,12 @@ import { AssuranceComponent } from './modules/general/client/assurance/assurance
 import { ParticulierComponent } from './modules/general/client/particulier/particulier.component';
 import { EntrepriseComponent } from './modules/general/client/entreprise/entreprise.component';
 import { ClientComponent } from './modules/general/client/client.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { FamilleComponent } from './modules/general/articles/familles/famille/famille.component';
+import { PrincipeActifComponent } from './modules/general/articles/principe-actifs/principe-actif/principe-actif.component';
+import { CodeGeographiqueComponent } from './modules/general/articles/code-geographiques/code-geographique/code-geographique.component';
+import { VenteDirecteComponent } from './modules/pharmaplus/ventes/vente-directe/vente-directe/vente-directe.component';
+import { CommandeArticleComponent } from './modules/pharmaplus/commandes/commande-article/commande-article/commande-article.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -42,9 +45,6 @@ import { ClientComponent } from './modules/general/client/client.component';
     ArticleComponent,
     AddarticleComponent,
     UpdatearticleComponent,
-    AddcategorieComponent,
-    UpdatecategorieComponent,
-    CategorieComponent,
     FournisseurComponent,
     AddfournisseurComponent,
     UpdatefournisseurComponent,
@@ -52,7 +52,13 @@ import { ClientComponent } from './modules/general/client/client.component';
     AssuranceComponent,
     ParticulierComponent,
     EntrepriseComponent,
-    ClientComponent
+    ClientComponent,
+    DashboardComponent,
+    FamilleComponent,
+    PrincipeActifComponent,
+    CodeGeographiqueComponent,
+    VenteDirecteComponent,
+    CommandeArticleComponent
   ],
   imports: [
     BrowserModule,

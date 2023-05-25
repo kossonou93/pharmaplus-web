@@ -3,6 +3,7 @@ import { User } from 'src/app/model/User';
 import { UsersService } from '../../../service/users/users.service';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { ApiConfig } from 'src/app/config/ApiConfig';
 
 @Component({
   selector: 'app-users',
@@ -31,7 +32,7 @@ export class UsersComponent {
       setTimeout(()=>{
         $('#datatableUser').DataTable({
           ajax: {
-            url:"http://localhost:8082/pharmaplus/user/all",
+            url:`${ApiConfig.users}/all`,
             dataSrc: "data"
           },
           columns:[

@@ -50,32 +50,21 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputName1">Nom</label>
-                    <input type="text" [(ngModel)]="currentArticle.name" name="name" class="form-control" id="exampleInputName1" placeholder="Nom">
+                    <input type="text" [(ngModel)]="currentArticle.designation" name="designation" class="form-control" id="exampleInputName1" placeholder="Designation">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword4">Prix</label>
-                    <input type="number" [(ngModel)]="currentArticle.price" name="price" class="form-control" id="exampleInputPassword4" placeholder="Prix">
+                    <input type="number" [(ngModel)]="currentArticle.prixAchatTtcEntier" name="prixAchatTtcEntier" class="form-control" id="exampleInputPassword4" placeholder="Prix Achat Ttc Entier">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputCity1">Quantité</label>
-                    <input type="number" class="form-control" [(ngModel)]="currentArticle.quantity" name="quantity" id="exampleInputCity1" placeholder="Quantité">
+                    <input type="number" class="form-control" [(ngModel)]="currentArticle.quantiteEntier" name="quantiteEntier" id="exampleInputCity1" placeholder="Quantité Entier">
                   </div>
                   <div class="form-group">
-                    <label for="exampleTextarea1">Description</label>
-                    <textarea class="form-control" [(ngModel)]="currentArticle.description" name="description" id="exampleTextarea1" rows="4"></textarea>
+                    <label for="exampleTextarea1">Commentatire</label>
+                    <textarea class="form-control" [(ngModel)]="currentArticle.commentaire" name="commentatire" id="exampleTextarea1" rows="4"></textarea>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleSelectGender">Catégories</label>
-                    <select id="idCat" [(ngModel)]="updateIdCat" class="form-control" name="idCat">
-                      <option *ngFor="let categorie of categories" [value]="categorie.id">{{categorie.name}}</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleSelectGender">Fournisseurs</label>
-                    <select class="form-control" id="idFour" [(ngModel)]="updateIdFour" name="idFour">
-                      <option *ngFor="let fournisseur of fournisseurs" [value]="fournisseur.id">{{fournisseur.firstName}} {{fournisseur.lastName}}</option>
-                    </select>
-                  </div>
+                  
                   <button type="submit" class="btn btn-primary me-2" (click)="updateArticle()">Submit</button>
                   <button class="btn btn-light">Cancel</button>
                 </form>

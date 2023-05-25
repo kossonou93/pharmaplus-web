@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { ApiConfig } from 'src/app/config/ApiConfig';
 import { Fournisseur } from 'src/app/model/Fournisseur';
-import { FournisseursService } from 'src/app/service/fournisseurs/fournisseurs.service';
+import { FournisseursService } from 'src/app/service/articles/fournisseurs/fournisseurs.service';
 
 @Component({
   selector: 'app-fournisseur',
@@ -41,13 +42,13 @@ export class FournisseurComponent implements OnInit{
   }
 
   chargerFournisseurs(){
-    this.fournisseurService.getAll().subscribe(fournisseur => {
+    this.fournisseurService.all().subscribe(fournisseur => {
       console.log(fournisseur);
       this.fournisseurs = fournisseur.data;
       setTimeout(()=>{
         $('#datatableFournisseur').DataTable({
           ajax: {
-            url:"http://localhost:8082/pharmaplus/fournisseur/all",
+            url:`${ApiConfig.fournisseurs}/all`,
             dataSrc: "data"
           },
           columns:[
@@ -63,22 +64,16 @@ export class FournisseurComponent implements OnInit{
               //, visible: false
             },
             {
-              title: "Prénom", data: "firstName"
-            },
-            {
-              title: "Nom", data: "lastName"
+              title: "Nom", data: "nom"
             },
             {
               title: "Identifiant", data: "identifiant"
             },
             {
-              title: "Email", data: "email"
+              title: "Code", data: "code"
             },
             {
-              title: "Adresse", data: "adresse"
-            },
-            {
-              title: "Téléphone", data: "telephone"
+              title: "Code Cip", data: "codeCip"
             }
           ],
           pagingType: 'full_numbers',

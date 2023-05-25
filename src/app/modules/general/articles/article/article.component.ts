@@ -66,22 +66,19 @@ export class ArticleComponent implements OnInit{
               //, visible: false
             },
             {
-              title: "Name", data: "name"
+              title: "Désignation", data: "designation"
             },
             {
-              title: "Description", data: "description"
+              title: "Code 1", data: "code1"
             },
             {
-              title: "Price", data: "price"
+              title: "Code 2", data: "code2"
             },
             {
-              title: "Quantity", data: "quantity"
+              title: "Prix Achat HT Entier", data: "prixAchatHtEntier"
             },
             {
-              title: "Fournisseur", data: "fournisseur.firstName"
-            },
-            {
-              title: "Catégorie", data: "categorie.name"
+              title: "Prix Achat TTC Entier", data: "prixAchatTtcEntier"
             }
           ],
           pagingType: 'full_numbers',

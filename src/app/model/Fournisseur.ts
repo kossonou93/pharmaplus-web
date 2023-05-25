@@ -1,9 +1,17 @@
 export class Fournisseur{
-  id?: string;
-  firstName?: string;
-  lastName?: string;
-  identifiant?: string;
-  email?: string;
-  adresse?: string;
-  telephone?: string;
+  id!: string;
+  nom!: string;
+  telephone!: string;
+  code!: string;
+  email!: string;
+  adresse!: string;
+  mobile!: string;
+  identifiant!: string;
+  nomRepresentant!: string;
+  fax!: string;
+  codeCip!: string;
+  idUserCrea!: string;
+  idUserModif!: string;
+  dateCrea!: Date;
+  dateModif!: Date;
 }

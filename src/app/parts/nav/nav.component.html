@@ -7,34 +7,50 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/users">
+      <a class="nav-link" data-bs-toggle="collapse" href="#user" aria-expanded="false" aria-controls="ui-basic">
         <i class="ti-user menu-icon"></i>
-        <span class="menu-title">Users</span>
+        <span class="menu-title">Utilisateurs</span>
+        <i class="menu-arrow"></i>
       </a>
+      <div class="collapse" id="user">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="/users">Users</a></li>
+          <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Roles</a></li>
+          <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Groups</a></li>
+          <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Droits</a></li>
+          <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Domaines</a></li>
+        </ul>
+      </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/fournisseurs">
-        <i class="ti-pie-chart menu-icon"></i>
-        <span class="menu-title">Fournisseurs</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/categories">
-        <i class="ti-view-list-alt menu-icon"></i>
-        <span class="menu-title">Catégories</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/articles">
-        <i class="ti-user menu-icon"></i>
+      <a class="nav-link" data-bs-toggle="collapse" href="#article" aria-expanded="false" aria-controls="ui-basic">
+        <i class="ti-palette menu-icon"></i>
         <span class="menu-title">Articles</span>
+        <i class="menu-arrow"></i>
       </a>
+      <div class="collapse" id="article">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="/articles">Articles</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/fournisseurs">Fournisseurs</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/familles">Familles</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/code-geographiques">Codes Géographiques</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/principe-actifs">Principes Actifs</a></li>
+        </ul>
+      </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/clients">
-        <i class="ti-user menu-icon"></i>
+      <a class="nav-link" data-bs-toggle="collapse" href="#client" aria-expanded="false" aria-controls="ui-basic">
+        <i class="ti-palette menu-icon"></i>
         <span class="menu-title">Clients</span>
+        <i class="menu-arrow"></i>
       </a>
+      <div class="collapse" id="client">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="/assurances">Assurances</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/entreprises">Entreprises</a></li>
+          <li class="nav-item"> <a class="nav-link" routerLink="/particuliers">Particuliers</a></li>
+        </ul>
+      </div>
     </li>
   </ul>
 </nav>
